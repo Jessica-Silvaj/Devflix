@@ -11,6 +11,13 @@ class Video extends Model
 
     protected $fillable =
     [
-        'titulo', 'resumo','duracao', 'ano','classificacao','categoria_id', 'url', 'fotoCapa', 'palavraChave'
+        'titulo', 'resumo','duracao', 'ano','classificacao','categoria_id', 'fotoCapa', 'url', 'palavraChave'
     ];
+
+    public  static function pesquisarPorCategoriaOuParavraChave($parametro)
+    {
+        return  self::where('categoria_id', $parametro)
+        ->orWhere('palavraChave', 'like', '%' . $parametro . '%')
+        ->get();
+    }
 }
