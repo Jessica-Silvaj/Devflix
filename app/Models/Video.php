@@ -11,6 +11,6 @@ class Video extends Model
 
     protected $fillable =
     [
-        'titulo', 'resumo','duracao', 'ano','classificacao','categoria_id'
+        'titulo', 'resumo','duracao', 'ano','classificacao','categoria_id', 'url', 'fotoCapa', 'palavraChave'
     ];
 }
