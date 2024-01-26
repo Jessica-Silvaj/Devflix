@@ -21,8 +21,7 @@ return new class extends Migration
             $table->timestamps();
             $table->foreignId('categoria_id')->constrained()->on('categorias');
         });
-
-
+        // TODO ADICIONAR OS SEGUINTES CAMPOS: fotoCapa, Url, palavra-chave.
 
     }
 

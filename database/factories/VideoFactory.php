@@ -22,6 +22,7 @@ class VideoFactory extends Factory
             'resumo' => fake()->text,
             'duracao' => fake()->randomNumber(5, false),
             'ano' => fake()->date('Y'),
+            'classificacao'=> fake()->randomElement(['L - livre', '10 anos', '12 anos', '14 anos', '16 anos', '18 anos']),
             'categoria_id' => function (){
                 return  Categoria::factory();
             }
