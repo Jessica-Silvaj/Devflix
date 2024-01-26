@@ -20,11 +20,10 @@ return new class extends Migration
             $table->enum('classificacao',['L - livre', '10 anos', '12 anos', '14 anos', '16 anos', '18 anos'])->default('L - Livre');
             $table->timestamps();
             $table->foreignId('categoria_id')->constrained()->on('categorias');
-            $table->string('url');
-            $table->string('fotoCapa');
-            $table->string('palavraChave');
+            $table->string('url')->nullable();;
+            $table->string('fotoCapa')->nullable();
+            $table->string('palavraChave')->nullable();
         });
-        // TODO ADICIONAR OS SEGUINTES CAMPOS: fotoCapa, Url, palavra-chave.
 
     }
 
